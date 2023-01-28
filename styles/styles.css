@@ -1,0 +1,130 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* phone screen */
+@media screen and (min-width: 414px) {
+  .container {
+    width: 414px;
+  }
+}
+
+/* tablet screen */
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+/* desktop screen */
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1280px;
+  }
+}
+
+@font-face {
+  font-family: "Film P3";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Film P3"), url("/fonts/FilmP3Bold.woff") format("woff");
+}
+
+/* ---------header--------- */
+
+/* -------------HERO------------- */
+
+.hero-container {
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .hero-title {
+    font-family: "Film P3";
+    font-size: 96px;
+    line-height: 1.07;
+    letter-spacing: 0.3em;
+    color: red;
+    padding-top: 181px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-title {
+    font-family: "Film P3";
+    font-size: 128px;
+    line-height: 1.08;
+    letter-spacing: 0.3em;
+    color: red;
+    padding-top: 188px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero-title {
+    font-family: "Film P3";
+    font-size: 128px;
+    line-height: 1.08;
+    letter-spacing: 0.3em;
+    color: red;
+    padding-top: 164px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-undertitile {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    color: blue;
+    margin-top: 24px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero-undertitile {
+    line-height: 1.2;
+  }
+}
