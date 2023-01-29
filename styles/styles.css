@@ -1,3 +1,17 @@
+:root {
+  --btn-bg-grey: rgba(0, 0, 0, 0.4);
+  --btn-bg-dark: #000000;
+  --btn-act-white: #ffffff;
+  --btn-act-yellow: #f3c653;
+  --brdr-btn-white: 2px solid #ffffff;
+  --brdr-btn-yel: 1px solid #f3c653;
+  --brdr-btn-yel-fat: 2px solid #f3c653;
+  --font-logo: "Film P3", sans-serif;
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Times New Roman", serif;
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 *,
 *::before,
 *::after {
@@ -10,21 +24,23 @@ img {
   height: auto;
 }
 
+body {
+  font-family: var(--font-primary);
+}
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-p {
-  margin-top: 0;
-  margin-bottom: 0;
+p,
+ul {
+  padding: 0;
+  margin: 0;
 }
 
 .list {
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .link {
@@ -32,30 +48,26 @@ p {
 }
 
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
+  width: 414px;
   margin-left: auto;
   margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-/* phone screen */
-@media screen and (min-width: 414px) {
+@media screen and (min-width: 1024px) {
   .container {
-    width: 414px;
+    width: 1024px;
+    padding-left: 47px;
+    padding-right: 47px;
   }
 }
 
-/* tablet screen */
-@media screen and (min-width: 768px) {
-  .container {
-    width: 768px;
-  }
-}
-
-/* desktop screen */
 @media screen and (min-width: 1280px) {
   .container {
     width: 1280px;
+    padding-left: 85px;
+    padding-right: 85px;
   }
 }
 
@@ -70,61 +82,217 @@ p {
 
 /* -------------HERO------------- */
 
-.hero-container {
-  display: flex;
+.hero {
+  max-width: 414px;
+  height: 740px;
+  padding-top: 181px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("../images/hero/hero_homepage_mob.jpg");
 }
 
-@media screen and (max-width: 767px) {
-  .hero-title {
-    font-family: "Film P3";
-    font-size: 96px;
-    line-height: 1.07;
-    letter-spacing: 0.3em;
-    color: red;
-    padding-top: 181px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .hero-title {
-    font-family: "Film P3";
-    font-size: 128px;
-    line-height: 1.08;
-    letter-spacing: 0.3em;
-    color: red;
+@media screen and (min-width: 1024px) {
+  .hero {
+    max-width: 1024px;
+    height: 720px;
     padding-top: 188px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .hero-title {
-    font-family: "Film P3";
-    font-size: 128px;
-    line-height: 1.08;
-    letter-spacing: 0.3em;
-    color: red;
+  .hero {
+    max-width: 1280px;
+    height: 720px;
     padding-top: 164px;
   }
 }
 
-@media screen and (max-width: 767px) {
+.hero-title {
+  font-family: "Film P3";
+  font-size: 96px;
+  line-height: 1.07;
+  letter-spacing: 0.3em;
+  color: #ffffff;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-title {
+    font-size: 128px;
+    line-height: 1.08;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero-title {
+    font-family: "Film P3";
+    font-size: 128px;
+    line-height: 1.08;
+  }
+}
+
+.hero-undertitile {
+  font-family: var(--font-primary);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-top: 24px;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
   .hero-undertitile {
-    font-family: "Montserrat";
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1.25;
-    letter-spacing: 0.02em;
-    color: blue;
-    margin-top: 24px;
-    margin-right: auto;
-    margin-left: auto;
+    line-height: 1.2;
+    margin-top: 20px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .hero-undertitile {
-    line-height: 1.2;
+    margin-top: 32px;
+  }
+}
+
+.hero-second-undertitile {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.15;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  margin-top: 40px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-second-undertitile {
+    font-size: 36px;
+    line-height: 1.14;
+    margin-top: 56px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero-second-undertitile {
+    margin-top: 64px;
+  }
+}
+
+.hero-btn-list {
+  margin-top: 113px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-btn-list {
+    flex-direction: row;
+    margin-top: 145px;
+  }
+}
+
+.hero-btn-item {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-btn-item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-btn-item {
+    margin-bottom: 0;
+  }
+  .hero-btn-item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.hero-btn {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  color: #f3c653;
+
+  width: 236px;
+  height: 48px;
+  border-radius: 25px;
+  border: var(--brdr-btn-white);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-social-list {
+  display: flex;
+  margin-top: 60px;
+}
+
+.hero-social-item {
+  margin-right: 23px;
+}
+
+.hero-social-icon {
+  fill: rgba(243, 198, 83, 0.7);
+}
+
+@media screen and (max-width: 1023px) {
+  .hero-map {
+    position: absolute;
+    top: 64px;
+    right: 15px;
+    display: flex;
+    padding: 8px 3px 9px 11px;
+    width: 210px;
+    height: 47px;
+    border: var(--brdr-btn-yel);
+    border-radius: 2px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero-map {
+    position: absolute;
+    width: 285px;
+    height: 56px;
+    left: 47px;
+    bottom: 64px;
+    display: flex;
+    border: var(--brdr-btn-yel);
+    border-radius: 2px;
+    padding: 8px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero-map {
+    left: 85px;
+  }
+}
+
+.adress-link {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  color: #e5e5e5;
+  margin-left: 7px;
+}
+
+@media screen and (min-width: 1024px) {
+  .adress-link {
+    font-size: 16px;
+    margin-left: 16px;
   }
 }
